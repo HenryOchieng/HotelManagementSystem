@@ -1,0 +1,13 @@
+c:\users\henry\documents\visual studio 2015\Projects\HotelManagementSystem\HotelManagementSystem\bin\Debug\HotelManagementSystem.exe.config
+c:\users\henry\documents\visual studio 2015\Projects\HotelManagementSystem\HotelManagementSystem\bin\Debug\HotelManagementSystem.exe
+c:\users\henry\documents\visual studio 2015\Projects\HotelManagementSystem\HotelManagementSystem\bin\Debug\HotelManagementSystem.pdb
+c:\users\henry\documents\visual studio 2015\Projects\HotelManagementSystem\HotelManagementSystem\obj\Debug\HotelManagementSystem.csprojResolveAssemblyReference.cache
+c:\users\henry\documents\visual studio 2015\Projects\HotelManagementSystem\HotelManagementSystem\obj\Debug\HotelManagementSystem.Properties.Resources.resources
+c:\users\henry\documents\visual studio 2015\Projects\HotelManagementSystem\HotelManagementSystem\obj\Debug\HotelManagementSystem.csproj.GenerateResource.Cache
+c:\users\henry\documents\visual studio 2015\Projects\HotelManagementSystem\HotelManagementSystem\obj\Debug\HotelManagementSystem.exe
+c:\users\henry\documents\visual studio 2015\Projects\HotelManagementSystem\HotelManagementSystem\obj\Debug\HotelManagementSystem.pdb
+C:\Users\Henry\Documents\Visual Studio 2015\Projects\HotelManagementSystem\HotelManagementSystem\obj\Debug\HotelManagementSystem.Login.resources
+C:\Users\Henry\Documents\Visual Studio 2015\Projects\HotelManagementSystem\HotelManagementSystem\obj\Debug\HotelManagementSystem.Main.resources
+C:\Users\Henry\Documents\Visual Studio 2015\Projects\HotelManagementSystem\HotelManagementSystem\obj\Debug\HotelManagementSystem.ClientsForm.resources
+C:\Users\Henry\Documents\Visual Studio 2015\Projects\HotelManagementSystem\HotelManagementSystem\obj\Debug\HotelManagementSystem.ReservationsForm.resources
+C:\Users\Henry\Documents\Visual Studio 2015\Projects\HotelManagementSystem\HotelManagementSystem\obj\Debug\HotelManagementSystem.RoomsForm.resources
