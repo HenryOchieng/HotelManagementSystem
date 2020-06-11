@@ -26,9 +26,9 @@ namespace HotelManagementSystem
         private void button1_Click(object sender, EventArgs e)
         {
             SqlConnection con=new SqlConnection("Data Source=HENRY\\SQL_2017;Initial Catalog=Hotel;Integrated Security=True");
-            SqlDataAdapter sda = new SqlDataAdapter("SELECT * FROM users", con);
+            SqlDataAdapter sda = new SqlDataAdapter("SELECT * FROM users WHERE username='"+ txtUsername.Text +"' AND password='"+ txtPassword.Text +"' ", con);
             DataTable table = new DataTable();
-
+            
             //if the username and password exists(if the table contains more than zero rows)
             sda.Fill(table);
             if(table.Rows.Count > 0 )
@@ -74,6 +74,11 @@ namespace HotelManagementSystem
             txtUsername.Clear();
             txtPassword.Clear();
             txtUsername.Focus();
+        }
+
+        private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+
         }
     }
 }
