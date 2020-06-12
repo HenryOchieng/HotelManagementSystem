@@ -36,6 +36,7 @@ namespace HotelManagementSystem
                 this.Hide();
                 Main main = new Main();
                 main.Show();
+                
                  
             }
             else
@@ -51,6 +52,8 @@ namespace HotelManagementSystem
                 else
                 {
                     MessageBox.Show("Please Enter Correct Login Credentials!", "Invalid Login Details", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    btnClear.PerformClick();
+                    
                 }
               
             }
@@ -79,6 +82,11 @@ namespace HotelManagementSystem
         private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
 
+        }
+
+        private void btnCancel_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

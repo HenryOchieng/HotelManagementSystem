@@ -160,5 +160,21 @@ namespace HotelManagementSystem
         {
 
         }
+
+        private void btnExit_Click(object sender, EventArgs e)
+        {
+            DialogResult iExit;
+            iExit = MessageBox.Show("Confirm If You Want To Exit Rooms Management", "Exit Rooms Management?", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            if(iExit == DialogResult.Yes)
+            {
+                Application.Exit();
+            }
+
+        }
+
+        private void btnCancel_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }

@@ -46,6 +46,8 @@
             this.label2 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
             this.lblCLIENTS = new System.Windows.Forms.Label();
+            this.btnCancel = new System.Windows.Forms.Button();
+            this.btnExit = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.panel2.SuspendLayout();
@@ -55,6 +57,8 @@
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
             this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.panel1.Controls.Add(this.btnExit);
+            this.panel1.Controls.Add(this.btnCancel);
             this.panel1.Controls.Add(this.btnClearFields);
             this.panel1.Controls.Add(this.btnDelete);
             this.panel1.Controls.Add(this.btnEdit);
@@ -82,9 +86,9 @@
             // 
             this.btnClearFields.Font = new System.Drawing.Font("Modern No. 20", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnClearFields.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
-            this.btnClearFields.Location = new System.Drawing.Point(10, 444);
+            this.btnClearFields.Location = new System.Drawing.Point(10, 404);
             this.btnClearFields.Name = "btnClearFields";
-            this.btnClearFields.Size = new System.Drawing.Size(325, 47);
+            this.btnClearFields.Size = new System.Drawing.Size(146, 47);
             this.btnClearFields.TabIndex = 15;
             this.btnClearFields.Text = "Clear Fields";
             this.btnClearFields.UseVisualStyleBackColor = true;
@@ -94,7 +98,7 @@
             // 
             this.btnDelete.Font = new System.Drawing.Font("Modern No. 20", 12.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnDelete.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
-            this.btnDelete.Location = new System.Drawing.Point(249, 369);
+            this.btnDelete.Location = new System.Drawing.Point(249, 349);
             this.btnDelete.Name = "btnDelete";
             this.btnDelete.Size = new System.Drawing.Size(86, 38);
             this.btnDelete.TabIndex = 14;
@@ -106,7 +110,7 @@
             // 
             this.btnEdit.Font = new System.Drawing.Font("Modern No. 20", 12.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnEdit.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
-            this.btnEdit.Location = new System.Drawing.Point(152, 369);
+            this.btnEdit.Location = new System.Drawing.Point(152, 349);
             this.btnEdit.Name = "btnEdit";
             this.btnEdit.Size = new System.Drawing.Size(91, 38);
             this.btnEdit.TabIndex = 13;
@@ -118,7 +122,7 @@
             // 
             this.btnAddNewClient.Font = new System.Drawing.Font("Modern No. 20", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAddNewClient.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
-            this.btnAddNewClient.Location = new System.Drawing.Point(10, 369);
+            this.btnAddNewClient.Location = new System.Drawing.Point(10, 349);
             this.btnAddNewClient.Name = "btnAddNewClient";
             this.btnAddNewClient.Size = new System.Drawing.Size(136, 38);
             this.btnAddNewClient.TabIndex = 12;
@@ -259,6 +263,30 @@
             this.lblCLIENTS.TabIndex = 0;
             this.lblCLIENTS.Text = "CLIENTS ";
             // 
+            // btnCancel
+            // 
+            this.btnCancel.Font = new System.Drawing.Font("Modern No. 20", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCancel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.btnCancel.Location = new System.Drawing.Point(196, 404);
+            this.btnCancel.Name = "btnCancel";
+            this.btnCancel.Size = new System.Drawing.Size(139, 47);
+            this.btnCancel.TabIndex = 16;
+            this.btnCancel.Text = "Cancel";
+            this.btnCancel.UseVisualStyleBackColor = true;
+            this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
+            // 
+            // btnExit
+            // 
+            this.btnExit.Font = new System.Drawing.Font("Modern No. 20", 26.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnExit.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.btnExit.Location = new System.Drawing.Point(10, 471);
+            this.btnExit.Name = "btnExit";
+            this.btnExit.Size = new System.Drawing.Size(325, 59);
+            this.btnExit.TabIndex = 17;
+            this.btnExit.Text = "Exit";
+            this.btnExit.UseVisualStyleBackColor = true;
+            this.btnExit.Click += new System.EventHandler(this.btnExit_Click);
+            // 
             // ClientsForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -298,5 +326,7 @@
         private System.Windows.Forms.Button btnDelete;
         private System.Windows.Forms.Button btnEdit;
         private System.Windows.Forms.Button btnAddNewClient;
+        private System.Windows.Forms.Button btnExit;
+        private System.Windows.Forms.Button btnCancel;
     }
 }

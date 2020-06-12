@@ -39,5 +39,10 @@ namespace HotelManagementSystem
             ReservationsForm Reservation = new ReservationsForm();
             Reservation.ShowDialog();
         }
+
+        private void Main_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

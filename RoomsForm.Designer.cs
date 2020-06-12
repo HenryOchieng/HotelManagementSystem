@@ -46,6 +46,8 @@
             this.lblRoomNo = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
             this.lblROOMS = new System.Windows.Forms.Label();
+            this.btnCancel = new System.Windows.Forms.Button();
+            this.btnExit = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
@@ -56,6 +58,8 @@
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
             this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.panel1.Controls.Add(this.btnExit);
+            this.panel1.Controls.Add(this.btnCancel);
             this.panel1.Controls.Add(this.panel3);
             this.panel1.Controls.Add(this.comboRoomType);
             this.panel1.Controls.Add(this.btnClearFields);
@@ -85,7 +89,7 @@
             this.panel3.Controls.Add(this.radioButtonYES);
             this.panel3.Location = new System.Drawing.Point(142, 247);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(193, 26);
+            this.panel3.Size = new System.Drawing.Size(186, 26);
             this.panel3.TabIndex = 17;
             // 
             // radioButtonNO
@@ -122,16 +126,16 @@
             this.comboRoomType.FormattingEnabled = true;
             this.comboRoomType.Location = new System.Drawing.Point(142, 160);
             this.comboRoomType.Name = "comboRoomType";
-            this.comboRoomType.Size = new System.Drawing.Size(193, 28);
+            this.comboRoomType.Size = new System.Drawing.Size(186, 28);
             this.comboRoomType.TabIndex = 16;
             // 
             // btnClearFields
             // 
             this.btnClearFields.Font = new System.Drawing.Font("Modern No. 20", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnClearFields.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
-            this.btnClearFields.Location = new System.Drawing.Point(10, 444);
+            this.btnClearFields.Location = new System.Drawing.Point(3, 403);
             this.btnClearFields.Name = "btnClearFields";
-            this.btnClearFields.Size = new System.Drawing.Size(325, 47);
+            this.btnClearFields.Size = new System.Drawing.Size(150, 47);
             this.btnClearFields.TabIndex = 15;
             this.btnClearFields.Text = "Clear Fields";
             this.btnClearFields.UseVisualStyleBackColor = true;
@@ -141,7 +145,7 @@
             // 
             this.btnDelete.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnDelete.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
-            this.btnDelete.Location = new System.Drawing.Point(249, 369);
+            this.btnDelete.Location = new System.Drawing.Point(242, 342);
             this.btnDelete.Name = "btnDelete";
             this.btnDelete.Size = new System.Drawing.Size(86, 38);
             this.btnDelete.TabIndex = 14;
@@ -153,7 +157,7 @@
             // 
             this.btnEdit.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnEdit.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
-            this.btnEdit.Location = new System.Drawing.Point(152, 369);
+            this.btnEdit.Location = new System.Drawing.Point(145, 342);
             this.btnEdit.Name = "btnEdit";
             this.btnEdit.Size = new System.Drawing.Size(91, 38);
             this.btnEdit.TabIndex = 13;
@@ -165,7 +169,7 @@
             // 
             this.btnAddNewRoom.Font = new System.Drawing.Font("Modern No. 20", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAddNewRoom.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
-            this.btnAddNewRoom.Location = new System.Drawing.Point(10, 369);
+            this.btnAddNewRoom.Location = new System.Drawing.Point(3, 342);
             this.btnAddNewRoom.Name = "btnAddNewRoom";
             this.btnAddNewRoom.Size = new System.Drawing.Size(136, 38);
             this.btnAddNewRoom.TabIndex = 12;
@@ -206,7 +210,7 @@
             this.txtPhoneNo.Font = new System.Drawing.Font("Modern No. 20", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtPhoneNo.Location = new System.Drawing.Point(142, 206);
             this.txtPhoneNo.Name = "txtPhoneNo";
-            this.txtPhoneNo.Size = new System.Drawing.Size(193, 26);
+            this.txtPhoneNo.Size = new System.Drawing.Size(186, 26);
             this.txtPhoneNo.TabIndex = 6;
             // 
             // lblPhoneNo
@@ -236,7 +240,7 @@
             this.txtRoomNo.Font = new System.Drawing.Font("Modern No. 20", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtRoomNo.Location = new System.Drawing.Point(142, 116);
             this.txtRoomNo.Name = "txtRoomNo";
-            this.txtRoomNo.Size = new System.Drawing.Size(193, 26);
+            this.txtRoomNo.Size = new System.Drawing.Size(186, 26);
             this.txtRoomNo.TabIndex = 2;
             // 
             // lblRoomNo
@@ -271,6 +275,30 @@
             this.lblROOMS.Size = new System.Drawing.Size(214, 54);
             this.lblROOMS.TabIndex = 0;
             this.lblROOMS.Text = "ROOMS ";
+            // 
+            // btnCancel
+            // 
+            this.btnCancel.Font = new System.Drawing.Font("Modern No. 20", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCancel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.btnCancel.Location = new System.Drawing.Point(178, 403);
+            this.btnCancel.Name = "btnCancel";
+            this.btnCancel.Size = new System.Drawing.Size(150, 47);
+            this.btnCancel.TabIndex = 18;
+            this.btnCancel.Text = "Cancel";
+            this.btnCancel.UseVisualStyleBackColor = true;
+            this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
+            // 
+            // btnExit
+            // 
+            this.btnExit.Font = new System.Drawing.Font("Modern No. 20", 26.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnExit.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.btnExit.Location = new System.Drawing.Point(3, 468);
+            this.btnExit.Name = "btnExit";
+            this.btnExit.Size = new System.Drawing.Size(325, 62);
+            this.btnExit.TabIndex = 19;
+            this.btnExit.Text = "Exit";
+            this.btnExit.UseVisualStyleBackColor = true;
+            this.btnExit.Click += new System.EventHandler(this.btnExit_Click);
             // 
             // RoomsForm
             // 
@@ -313,5 +341,7 @@
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.RadioButton radioButtonNO;
         private System.Windows.Forms.RadioButton radioButtonYES;
+        private System.Windows.Forms.Button btnExit;
+        private System.Windows.Forms.Button btnCancel;
     }
 }

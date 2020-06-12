@@ -49,6 +49,8 @@
             this.lblReservationID = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
             this.lblReservations = new System.Windows.Forms.Label();
+            this.btnExit = new System.Windows.Forms.Button();
+            this.btnCancel = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.panel2.SuspendLayout();
@@ -58,6 +60,8 @@
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
             this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.panel1.Controls.Add(this.btnCancel);
+            this.panel1.Controls.Add(this.btnExit);
             this.panel1.Controls.Add(this.txtClientID);
             this.panel1.Controls.Add(this.lblClientID);
             this.panel1.Controls.Add(this.dateTimePickerDateOut);
@@ -90,7 +94,7 @@
             this.txtClientID.Font = new System.Drawing.Font("Modern No. 20", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtClientID.Location = new System.Drawing.Point(142, 162);
             this.txtClientID.Name = "txtClientID";
-            this.txtClientID.Size = new System.Drawing.Size(193, 26);
+            this.txtClientID.Size = new System.Drawing.Size(187, 26);
             this.txtClientID.TabIndex = 27;
             // 
             // lblClientID
@@ -112,7 +116,7 @@
             this.dateTimePickerDateOut.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.dateTimePickerDateOut.Location = new System.Drawing.Point(142, 341);
             this.dateTimePickerDateOut.Name = "dateTimePickerDateOut";
-            this.dateTimePickerDateOut.Size = new System.Drawing.Size(193, 28);
+            this.dateTimePickerDateOut.Size = new System.Drawing.Size(187, 28);
             this.dateTimePickerDateOut.TabIndex = 25;
             // 
             // dateTimePickerDateIn
@@ -123,7 +127,7 @@
             this.dateTimePickerDateIn.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.dateTimePickerDateIn.Location = new System.Drawing.Point(142, 296);
             this.dateTimePickerDateIn.Name = "dateTimePickerDateIn";
-            this.dateTimePickerDateIn.Size = new System.Drawing.Size(193, 28);
+            this.dateTimePickerDateIn.Size = new System.Drawing.Size(187, 28);
             this.dateTimePickerDateIn.TabIndex = 24;
             // 
             // lblDateOut
@@ -154,7 +158,7 @@
             this.comboRoomNo.FormattingEnabled = true;
             this.comboRoomNo.Location = new System.Drawing.Point(142, 251);
             this.comboRoomNo.Name = "comboRoomNo";
-            this.comboRoomNo.Size = new System.Drawing.Size(193, 28);
+            this.comboRoomNo.Size = new System.Drawing.Size(187, 28);
             this.comboRoomNo.TabIndex = 19;
             // 
             // comboRoomType
@@ -163,7 +167,7 @@
             this.comboRoomType.FormattingEnabled = true;
             this.comboRoomType.Location = new System.Drawing.Point(142, 204);
             this.comboRoomType.Name = "comboRoomType";
-            this.comboRoomType.Size = new System.Drawing.Size(193, 28);
+            this.comboRoomType.Size = new System.Drawing.Size(187, 28);
             this.comboRoomType.TabIndex = 16;
             this.comboRoomType.SelectedIndexChanged += new System.EventHandler(this.comboRoomType_SelectedIndexChanged);
             // 
@@ -171,9 +175,9 @@
             // 
             this.btnClearFields.Font = new System.Drawing.Font("Modern No. 20", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnClearFields.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
-            this.btnClearFields.Location = new System.Drawing.Point(13, 481);
+            this.btnClearFields.Location = new System.Drawing.Point(3, 423);
             this.btnClearFields.Name = "btnClearFields";
-            this.btnClearFields.Size = new System.Drawing.Size(325, 47);
+            this.btnClearFields.Size = new System.Drawing.Size(160, 40);
             this.btnClearFields.TabIndex = 15;
             this.btnClearFields.Text = "Clear Fields";
             this.btnClearFields.UseVisualStyleBackColor = true;
@@ -183,9 +187,9 @@
             // 
             this.btnDelete.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnDelete.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
-            this.btnDelete.Location = new System.Drawing.Point(252, 406);
+            this.btnDelete.Location = new System.Drawing.Point(252, 379);
             this.btnDelete.Name = "btnDelete";
-            this.btnDelete.Size = new System.Drawing.Size(86, 38);
+            this.btnDelete.Size = new System.Drawing.Size(77, 38);
             this.btnDelete.TabIndex = 14;
             this.btnDelete.Text = "Delete";
             this.btnDelete.UseVisualStyleBackColor = true;
@@ -195,7 +199,7 @@
             // 
             this.btnEdit.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnEdit.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
-            this.btnEdit.Location = new System.Drawing.Point(182, 406);
+            this.btnEdit.Location = new System.Drawing.Point(182, 379);
             this.btnEdit.Name = "btnEdit";
             this.btnEdit.Size = new System.Drawing.Size(64, 38);
             this.btnEdit.TabIndex = 13;
@@ -207,7 +211,7 @@
             // 
             this.btnAddNewReservation.Font = new System.Drawing.Font("Modern No. 20", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAddNewReservation.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
-            this.btnAddNewReservation.Location = new System.Drawing.Point(3, 406);
+            this.btnAddNewReservation.Location = new System.Drawing.Point(3, 379);
             this.btnAddNewReservation.Name = "btnAddNewReservation";
             this.btnAddNewReservation.Size = new System.Drawing.Size(173, 38);
             this.btnAddNewReservation.TabIndex = 12;
@@ -266,7 +270,7 @@
             this.txtReservationID.Font = new System.Drawing.Font("Modern No. 20", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtReservationID.Location = new System.Drawing.Point(142, 116);
             this.txtReservationID.Name = "txtReservationID";
-            this.txtReservationID.Size = new System.Drawing.Size(193, 26);
+            this.txtReservationID.Size = new System.Drawing.Size(187, 26);
             this.txtReservationID.TabIndex = 2;
             // 
             // lblReservationID
@@ -302,6 +306,30 @@
             this.lblReservations.Size = new System.Drawing.Size(438, 54);
             this.lblReservations.TabIndex = 0;
             this.lblReservations.Text = "RESERVATIONS ";
+            // 
+            // btnExit
+            // 
+            this.btnExit.Font = new System.Drawing.Font("Modern No. 20", 26.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnExit.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.btnExit.Location = new System.Drawing.Point(3, 469);
+            this.btnExit.Name = "btnExit";
+            this.btnExit.Size = new System.Drawing.Size(326, 61);
+            this.btnExit.TabIndex = 28;
+            this.btnExit.Text = "Exit";
+            this.btnExit.UseVisualStyleBackColor = true;
+            this.btnExit.Click += new System.EventHandler(this.btnExit_Click);
+            // 
+            // btnCancel
+            // 
+            this.btnCancel.Font = new System.Drawing.Font("Modern No. 20", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCancel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.btnCancel.Location = new System.Drawing.Point(178, 423);
+            this.btnCancel.Name = "btnCancel";
+            this.btnCancel.Size = new System.Drawing.Size(151, 40);
+            this.btnCancel.TabIndex = 29;
+            this.btnCancel.Text = "Cancel";
+            this.btnCancel.UseVisualStyleBackColor = true;
+            this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
             // 
             // ReservationsForm
             // 
@@ -345,5 +373,7 @@
         private System.Windows.Forms.ComboBox comboRoomType;
         private System.Windows.Forms.TextBox txtClientID;
         private System.Windows.Forms.Label lblClientID;
+        private System.Windows.Forms.Button btnExit;
+        private System.Windows.Forms.Button btnCancel;
     }
 }
