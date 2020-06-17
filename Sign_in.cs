@@ -72,7 +72,7 @@ namespace HotelManagementSystem
         private void btnExit_Click(object sender, EventArgs e)
         {
             DialogResult iExit;
-            iExit = MessageBox.Show("Confirm if you want to exit", "EXIT SIGN_IN PAGE?", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            iExit = MessageBox.Show("Confirm if you want to exit", "LISHE BORA HOTEL", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
             if(iExit==DialogResult.Yes)
             {
                 Application.Exit();
