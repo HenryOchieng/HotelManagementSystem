@@ -29,6 +29,8 @@
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
+            this.btnExit = new System.Windows.Forms.Button();
+            this.btnCancel = new System.Windows.Forms.Button();
             this.panel3 = new System.Windows.Forms.Panel();
             this.radioButtonNO = new System.Windows.Forms.RadioButton();
             this.radioButtonYES = new System.Windows.Forms.RadioButton();
@@ -39,15 +41,13 @@
             this.btnAddNewRoom = new System.Windows.Forms.Button();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.lblFree = new System.Windows.Forms.Label();
-            this.txtPhoneNo = new System.Windows.Forms.TextBox();
-            this.lblPhoneNo = new System.Windows.Forms.Label();
+            this.lblPrice = new System.Windows.Forms.Label();
             this.lblRoomType = new System.Windows.Forms.Label();
             this.txtRoomNo = new System.Windows.Forms.TextBox();
             this.lblRoomNo = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
             this.lblROOMS = new System.Windows.Forms.Label();
-            this.btnCancel = new System.Windows.Forms.Button();
-            this.btnExit = new System.Windows.Forms.Button();
+            this.comboBoxprice = new System.Windows.Forms.ComboBox();
             this.panel1.SuspendLayout();
             this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
@@ -58,6 +58,7 @@
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
             this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.panel1.Controls.Add(this.comboBoxprice);
             this.panel1.Controls.Add(this.btnExit);
             this.panel1.Controls.Add(this.btnCancel);
             this.panel1.Controls.Add(this.panel3);
@@ -68,8 +69,7 @@
             this.panel1.Controls.Add(this.btnAddNewRoom);
             this.panel1.Controls.Add(this.dataGridView1);
             this.panel1.Controls.Add(this.lblFree);
-            this.panel1.Controls.Add(this.txtPhoneNo);
-            this.panel1.Controls.Add(this.lblPhoneNo);
+            this.panel1.Controls.Add(this.lblPrice);
             this.panel1.Controls.Add(this.lblRoomType);
             this.panel1.Controls.Add(this.txtRoomNo);
             this.panel1.Controls.Add(this.lblRoomNo);
@@ -80,6 +80,34 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(913, 544);
             this.panel1.TabIndex = 1;
+            // 
+            // btnExit
+            // 
+            this.btnExit.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnExit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnExit.Font = new System.Drawing.Font("Modern No. 20", 26.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnExit.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.btnExit.Location = new System.Drawing.Point(3, 468);
+            this.btnExit.Name = "btnExit";
+            this.btnExit.Size = new System.Drawing.Size(325, 62);
+            this.btnExit.TabIndex = 19;
+            this.btnExit.Text = "Exit";
+            this.btnExit.UseVisualStyleBackColor = true;
+            this.btnExit.Click += new System.EventHandler(this.btnExit_Click);
+            // 
+            // btnCancel
+            // 
+            this.btnCancel.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnCancel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCancel.Font = new System.Drawing.Font("Modern No. 20", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCancel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.btnCancel.Location = new System.Drawing.Point(178, 403);
+            this.btnCancel.Name = "btnCancel";
+            this.btnCancel.Size = new System.Drawing.Size(150, 47);
+            this.btnCancel.TabIndex = 18;
+            this.btnCancel.Text = "Cancel";
+            this.btnCancel.UseVisualStyleBackColor = true;
+            this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
             // 
             // panel3
             // 
@@ -131,6 +159,8 @@
             // 
             // btnClearFields
             // 
+            this.btnClearFields.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnClearFields.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnClearFields.Font = new System.Drawing.Font("Modern No. 20", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnClearFields.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
             this.btnClearFields.Location = new System.Drawing.Point(3, 403);
@@ -143,6 +173,8 @@
             // 
             // btnDelete
             // 
+            this.btnDelete.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnDelete.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnDelete.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnDelete.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
             this.btnDelete.Location = new System.Drawing.Point(242, 342);
@@ -155,6 +187,8 @@
             // 
             // btnEdit
             // 
+            this.btnEdit.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnEdit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnEdit.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnEdit.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
             this.btnEdit.Location = new System.Drawing.Point(145, 342);
@@ -167,6 +201,8 @@
             // 
             // btnAddNewRoom
             // 
+            this.btnAddNewRoom.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnAddNewRoom.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAddNewRoom.Font = new System.Drawing.Font("Modern No. 20", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAddNewRoom.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
             this.btnAddNewRoom.Location = new System.Drawing.Point(3, 342);
@@ -192,7 +228,6 @@
             this.dataGridView1.Size = new System.Drawing.Size(541, 414);
             this.dataGridView1.TabIndex = 11;
             this.dataGridView1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellClick);
-            this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
             // lblFree
             // 
@@ -205,24 +240,16 @@
             this.lblFree.TabIndex = 7;
             this.lblFree.Text = "Free : ";
             // 
-            // txtPhoneNo
+            // lblPrice
             // 
-            this.txtPhoneNo.Font = new System.Drawing.Font("Modern No. 20", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtPhoneNo.Location = new System.Drawing.Point(142, 206);
-            this.txtPhoneNo.Name = "txtPhoneNo";
-            this.txtPhoneNo.Size = new System.Drawing.Size(186, 26);
-            this.txtPhoneNo.TabIndex = 6;
-            // 
-            // lblPhoneNo
-            // 
-            this.lblPhoneNo.AutoSize = true;
-            this.lblPhoneNo.Font = new System.Drawing.Font("Modern No. 20", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblPhoneNo.ForeColor = System.Drawing.Color.Aqua;
-            this.lblPhoneNo.Location = new System.Drawing.Point(38, 212);
-            this.lblPhoneNo.Name = "lblPhoneNo";
-            this.lblPhoneNo.Size = new System.Drawing.Size(92, 20);
-            this.lblPhoneNo.TabIndex = 5;
-            this.lblPhoneNo.Text = "Phone No : ";
+            this.lblPrice.AutoSize = true;
+            this.lblPrice.Font = new System.Drawing.Font("Modern No. 20", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblPrice.ForeColor = System.Drawing.Color.Aqua;
+            this.lblPrice.Location = new System.Drawing.Point(70, 212);
+            this.lblPrice.Name = "lblPrice";
+            this.lblPrice.Size = new System.Drawing.Size(60, 20);
+            this.lblPrice.TabIndex = 5;
+            this.lblPrice.Text = "Price : ";
             // 
             // lblRoomType
             // 
@@ -276,29 +303,14 @@
             this.lblROOMS.TabIndex = 0;
             this.lblROOMS.Text = "ROOMS ";
             // 
-            // btnCancel
+            // comboBoxprice
             // 
-            this.btnCancel.Font = new System.Drawing.Font("Modern No. 20", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCancel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
-            this.btnCancel.Location = new System.Drawing.Point(178, 403);
-            this.btnCancel.Name = "btnCancel";
-            this.btnCancel.Size = new System.Drawing.Size(150, 47);
-            this.btnCancel.TabIndex = 18;
-            this.btnCancel.Text = "Cancel";
-            this.btnCancel.UseVisualStyleBackColor = true;
-            this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
-            // 
-            // btnExit
-            // 
-            this.btnExit.Font = new System.Drawing.Font("Modern No. 20", 26.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnExit.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
-            this.btnExit.Location = new System.Drawing.Point(3, 468);
-            this.btnExit.Name = "btnExit";
-            this.btnExit.Size = new System.Drawing.Size(325, 62);
-            this.btnExit.TabIndex = 19;
-            this.btnExit.Text = "Exit";
-            this.btnExit.UseVisualStyleBackColor = true;
-            this.btnExit.Click += new System.EventHandler(this.btnExit_Click);
+            this.comboBoxprice.Font = new System.Drawing.Font("Modern No. 20", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.comboBoxprice.FormattingEnabled = true;
+            this.comboBoxprice.Location = new System.Drawing.Point(142, 204);
+            this.comboBoxprice.Name = "comboBoxprice";
+            this.comboBoxprice.Size = new System.Drawing.Size(186, 28);
+            this.comboBoxprice.TabIndex = 20;
             // 
             // RoomsForm
             // 
@@ -330,8 +342,7 @@
         private System.Windows.Forms.Button btnAddNewRoom;
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.Label lblFree;
-        private System.Windows.Forms.TextBox txtPhoneNo;
-        private System.Windows.Forms.Label lblPhoneNo;
+        private System.Windows.Forms.Label lblPrice;
         private System.Windows.Forms.Label lblRoomType;
         private System.Windows.Forms.TextBox txtRoomNo;
         private System.Windows.Forms.Label lblRoomNo;
@@ -343,5 +354,6 @@
         private System.Windows.Forms.RadioButton radioButtonYES;
         private System.Windows.Forms.Button btnExit;
         private System.Windows.Forms.Button btnCancel;
+        private System.Windows.Forms.ComboBox comboBoxprice;
     }
 }

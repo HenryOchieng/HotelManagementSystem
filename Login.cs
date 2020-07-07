@@ -11,16 +11,16 @@ using System.Windows.Forms;
 
 namespace HotelManagementSystem
 {
-    public partial class Sign_in : Form
+    public partial class Login : Form
     {
-        public Sign_in()
+        public Login()
         {
             InitializeComponent();
         }
 
         private void textBox2_TextChanged(object sender, EventArgs e)
         {
-
+            //textBoxusername.Enabled = false;
         }
 
         private void btnLogin_Click(object sender, EventArgs e)
@@ -32,7 +32,7 @@ namespace HotelManagementSystem
             if(dt.Rows.Count > 0)
             {
                 this.Hide();
-                Main main = new Main();
+                Welcome main = new Welcome();
                 main.Show();
             }
             else
@@ -77,6 +77,11 @@ namespace HotelManagementSystem
             {
                 Application.Exit();
             }
+        }
+
+        private void textBoxpassword_TextChanged_1(object sender, EventArgs e)
+        {
+
         }
     }
 }

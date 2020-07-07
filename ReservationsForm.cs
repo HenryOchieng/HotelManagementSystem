@@ -64,20 +64,10 @@ namespace HotelManagementSystem
         {
             txtReservationID.Text = "";
             txtClientID.Text = "";
-            comboRoomType.SelectedIndex = 0;
-            //comboRoomNo.SelectedIndex = 0;
+            comboRoomType.SelectedValue = 0;
+            comboRoomNo.SelectedValue = 0;
             dateTimePickerDateIn.Value = DateTime.Now;
             dateTimePickerDateOut.Value = DateTime.Now;
-        }
-
-        private void panel2_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void panel1_Paint(object sender, PaintEventArgs e)
-        {
-
         }
 
         private void ReservationsForm_Load(object sender, EventArgs e)
@@ -165,11 +155,6 @@ namespace HotelManagementSystem
             }
         }
 
-        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
-        }
-
         private void btnRemove_Click(object sender, EventArgs e)
         {
             try
@@ -181,6 +166,7 @@ namespace HotelManagementSystem
                     room.setRoomFree(room_no, "YES");
                     dataGridView1.DataSource = reservation.getReservations();
                     MessageBox.Show("Reservation Deleted Successfully.", "Delete Reservation!", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    btnClearFields.PerformClick();
                 }
                 else
                 {
@@ -199,7 +185,7 @@ namespace HotelManagementSystem
         private void btnExit_Click(object sender, EventArgs e)
         {
             DialogResult iExit;
-            iExit = MessageBox.Show("Confirm If You Want To Exit Reservations Tab", "Exit Reservations", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            iExit = MessageBox.Show("Confirm If You Want To Exit", "LISHE BORA HOTEL", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
             if (iExit== DialogResult.Yes)
             {
                 Application.Exit();

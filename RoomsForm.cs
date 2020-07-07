@@ -26,13 +26,18 @@ namespace HotelManagementSystem
             comboRoomType.DisplayMember = "label";
             comboRoomType.ValueMember = "category_id";
 
+            //display price
+            comboBoxprice.DataSource = room.roomTypeList();
+            comboBoxprice.DisplayMember = "price";
+            comboBoxprice.ValueMember = "category_id";
+
             dataGridView1.DataSource = room.getRooms();
         }
 
         private void btnAddNewRoom_Click(object sender, EventArgs e)
         {
             int room_type = Convert.ToInt32(comboRoomType.SelectedValue.ToString());
-            String phone_no = txtPhoneNo.Text;
+            int price = Convert.ToInt32(comboBoxprice.SelectedValue.ToString());
             String free = "";
 
             try
@@ -47,7 +52,7 @@ namespace HotelManagementSystem
                     free = "NO";
                 }
 
-                if (room.addRoom(room_no, room_type, phone_no, free))
+                if (room.addRoom(room_no, room_type, price, free))
                 {
                     dataGridView1.DataSource = room.getRooms();
                     MessageBox.Show("New Room Added Successfully!", "Add Room", MessageBoxButtons.OK, MessageBoxIcon.Information);
@@ -69,9 +74,9 @@ namespace HotelManagementSystem
 
         private void btnClearFields_Click(object sender, EventArgs e)
         {
-            txtPhoneNo.Text = "";
+            comboBoxprice.SelectedValue = 0;
             txtRoomNo.Text = "";
-            comboRoomType.SelectedIndex = 0;
+            comboRoomType.SelectedValue = 0;
             radioButtonYES.Checked = false;
             radioButtonNO.Checked = false;
         }
@@ -80,7 +85,7 @@ namespace HotelManagementSystem
         {
             txtRoomNo.Text = dataGridView1.CurrentRow.Cells[0].Value.ToString();
             comboRoomType.SelectedValue = dataGridView1.CurrentRow.Cells[1].Value;
-            txtPhoneNo.Text = dataGridView1.CurrentRow.Cells[2].Value.ToString();
+            comboBoxprice.SelectedValue = dataGridView1.CurrentRow.Cells[2].Value;
 
             String free = dataGridView1.CurrentRow.Cells[3].Value.ToString();
 
@@ -98,7 +103,7 @@ namespace HotelManagementSystem
         {
             
             int room_type = Convert.ToInt32(comboRoomType.SelectedValue.ToString());
-            String phone_no = txtPhoneNo.Text;
+            int price = Convert.ToInt32(comboBoxprice.SelectedValue.ToString());
             String free = "";
 
             try
@@ -113,7 +118,7 @@ namespace HotelManagementSystem
                 {
                     free = "NO";
                 }
-                if (room.editRooms(room_no, room_type, phone_no, free))
+                if (room.editRooms(room_no, room_type, price, free))
                 {
                     dataGridView1.DataSource = room.getRooms();
                     MessageBox.Show("Room Data Updated Successfully!", "Update Room Data", MessageBoxButtons.OK, MessageBoxIcon.Information);
@@ -154,11 +159,6 @@ namespace HotelManagementSystem
                 MessageBox.Show(ex.Message, "Room No Error!", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             
-        }
-
-        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
         }
 
         private void btnExit_Click(object sender, EventArgs e)

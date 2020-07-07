@@ -103,12 +103,6 @@ namespace HotelManagementSystem
                 MessageBox.Show(ex.Message, "ID ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
-
-        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-            
-        }
-
         //show selected client data from the datagridview to the textboxes//
         private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
         {
@@ -147,7 +141,7 @@ namespace HotelManagementSystem
         private void btnExit_Click(object sender, EventArgs e)
         {
             DialogResult iExit;
-            iExit = MessageBox.Show("Confirm If You Want To Exit Clients Management", "Exit Clients Management?", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            iExit = MessageBox.Show("Confirm If You Want To Exit", "LISHE BORA HOTEL", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
             if(iExit==DialogResult.Yes)
             {
                 Application.Exit();
