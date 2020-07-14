@@ -78,7 +78,7 @@ namespace HotelManagementSystem
             comboRoomType.ValueMember = "category_id";
 
             //show room number depending on the selected room type
-            int room_type = Convert.ToInt32(comboRoomType.SelectedValue.ToString());
+            String room_type = comboRoomType.SelectedValue.ToString();
             comboRoomNo.DataSource = room.getRoomsByType(room_type);
             comboRoomNo.DisplayMember = "room_no";
             comboRoomNo.ValueMember = "room_no";
@@ -91,7 +91,7 @@ namespace HotelManagementSystem
         {
             try
             {
-                int room_type = Convert.ToInt32(comboRoomType.SelectedValue.ToString());
+                String room_type = comboRoomType.SelectedValue.ToString();
                 comboRoomNo.DataSource = room.getRoomsByType(room_type);
                 comboRoomNo.DisplayMember = "room_no";
                 comboRoomNo.ValueMember = "room_no";
@@ -107,7 +107,7 @@ namespace HotelManagementSystem
             txtReservationID.Text = dataGridView1.CurrentRow.Cells[0].Value.ToString();
             txtClientID.Text = dataGridView1.CurrentRow.Cells[1].Value.ToString();
             comboRoomNo.SelectedValue = dataGridView1.CurrentRow.Cells[2].Value.ToString();
-            int room_type = Convert.ToInt32(dataGridView1.CurrentRow.Cells[2].Value.ToString());
+            String room_type = dataGridView1.CurrentRow.Cells[2].Value.ToString();
             comboRoomType.SelectedValue = room.getRoomType(room_type);
             dateTimePickerDateIn.Value = Convert.ToDateTime(dataGridView1.CurrentRow.Cells[3].Value);
             dateTimePickerDateOut.Value = Convert.ToDateTime(dataGridView1.CurrentRow.Cells[4].Value);

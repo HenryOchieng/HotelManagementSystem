@@ -40,7 +40,7 @@ namespace HotelManagementSystem
             }
             catch(Exception ex)
             {
-                MessageBox.Show(ex.Message, "Room Attendant Reservation Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show(ex.Message, "Room Attendant Addition Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
@@ -50,7 +50,7 @@ namespace HotelManagementSystem
             txtFirstName.Text = dataGridView1.CurrentRow.Cells[1].Value.ToString();
             txtLastName.Text = dataGridView1.CurrentRow.Cells[2].Value.ToString();
             comboBoxRoomNo.SelectedValue = dataGridView1.CurrentRow.Cells[3].Value.ToString();
-            int room_type = Convert.ToInt32(dataGridView1.CurrentRow.Cells[3].Value.ToString());
+            String room_type = dataGridView1.CurrentRow.Cells[3].Value.ToString();
             comboBoxRoomType.SelectedValue = room.getRoomType(room_type);
         }
 
@@ -62,7 +62,7 @@ namespace HotelManagementSystem
             comboBoxRoomType.ValueMember = "category_id";
 
             //show room number depending on the selected room type
-            int room_type = Convert.ToInt32(comboBoxRoomType.SelectedValue.ToString());
+            String room_type = comboBoxRoomType.SelectedValue.ToString();
             comboBoxRoomNo.DataSource = room.getRoomsByType(room_type);
             comboBoxRoomNo.DisplayMember = "room_no";
             comboBoxRoomNo.ValueMember = "room_no";
@@ -75,7 +75,7 @@ namespace HotelManagementSystem
             
                try
             {
-                int room_type = Convert.ToInt32(comboBoxRoomType.SelectedValue.ToString());
+                String room_type = comboBoxRoomType.SelectedValue.ToString();
                 comboBoxRoomNo.DataSource = room.getRoomsByType(room_type);
                 comboBoxRoomNo.DisplayMember = "room_no";
                 comboBoxRoomNo.ValueMember = "room_no";
@@ -89,34 +89,48 @@ namespace HotelManagementSystem
 
         private void btnEdit_Click(object sender, EventArgs e)
         {
-            int attendant_id = Convert.ToInt32(txtAttendantID.Text);
-            String first_name = txtFirstName.Text;
-            String last_name = txtLastName.Text;
-            int room_no = Convert.ToInt32(dataGridView1.CurrentRow.Cells[3].Value.ToString());
-            if(attendants.EditRoomAttendants(attendant_id, first_name, last_name, room_no))
+           try
             {
-                dataGridView1.DataSource = attendants.getRoomAttendants();
-                MessageBox.Show("Room Attendant Updated Successfully", "UPDATE ROOM ATTENDANT", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                btnClearFields.PerformClick();
+                int attendant_id = Convert.ToInt32(txtAttendantID.Text);
+                String first_name = txtFirstName.Text;
+                String last_name = txtLastName.Text;
+                int room_no = Convert.ToInt32(dataGridView1.CurrentRow.Cells[3].Value.ToString());
+                if (attendants.EditRoomAttendants(attendant_id, first_name, last_name, room_no))
+                {
+                    dataGridView1.DataSource = attendants.getRoomAttendants();
+                    MessageBox.Show("Room Attendant Updated Successfully", "UPDATE ROOM ATTENDANT", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    btnClearFields.PerformClick();
+                }
+                else
+                {
+                    MessageBox.Show("Failed Updating Room Attendant", "UPDATE ROOM ATTENDANT", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
             }
-            else
+            catch(Exception ex)
             {
-                MessageBox.Show("Failed Updating Room Attendant", "UPDATE ROOM ATTENDANT", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show(ex.Message, "Room Attendant Update Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
         private void btnDelete_Click(object sender, EventArgs e)
         {
-            int attendant_id = Convert.ToInt32(txtAttendantID.Text);
-            if(attendants.removeRoomAttendants(attendant_id))
+           try
             {
-                dataGridView1.DataSource = attendants.getRoomAttendants();
-                MessageBox.Show("Room Attendant Removed Successfully", "DELETE ROOM ATTENDANT", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                btnClearFields.PerformClick();
+                int attendant_id = Convert.ToInt32(txtAttendantID.Text);
+                if (attendants.removeRoomAttendants(attendant_id))
+                {
+                    dataGridView1.DataSource = attendants.getRoomAttendants();
+                    MessageBox.Show("Room Attendant Removed Successfully", "DELETE ROOM ATTENDANT", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    btnClearFields.PerformClick();
+                }
+                else
+                {
+                    MessageBox.Show("Room Attendant Removal Failed", "DELETE ROOM ATTENDANT", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
             }
-            else
+            catch(Exception ex)
             {
-                MessageBox.Show("Room Attendant Removal Failed", "DELETE ROOM ATTENDANT", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show(ex.Message, "Room Attendant Removal Error");
             }
         }
 

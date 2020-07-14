@@ -26,12 +26,12 @@ namespace HotelManagementSystem
         }
 
         //function to add rooms//
-        public bool  addRoom(int room_no, int room_type, int price, String  free)
+        public bool  addRoom(int room_no, String room_type, int price, String  free)
         {
             SqlCommand cmd = new SqlCommand("INSERT  INTO rooms(room_no, room_type, price, free) VALUES(@roomno, @roomtype, @price, @free)", con);
             cmd.Parameters.Add("@roomno", SqlDbType.Int).Value = room_no;
-            cmd.Parameters.Add("@roomtype", SqlDbType.Int).Value = room_type;
-            cmd.Parameters.Add("@price", SqlDbType.VarChar).Value = price;
+            cmd.Parameters.Add("@roomtype", SqlDbType.VarChar).Value = room_type;
+            cmd.Parameters.Add("@price", SqlDbType.Int).Value = price;
             cmd.Parameters.Add("@free", SqlDbType.VarChar).Value = free;
             con.Open();
 
@@ -59,29 +59,41 @@ namespace HotelManagementSystem
 
         }
 
-        //function to get all room numbers depending on room types
-        public DataTable getRoomsByType(int room_no)
+        //function to get all rooms depending on room types
+        public DataTable getRoomsByType(String room_type)
         {
             SqlCommand cmd = new SqlCommand("SELECT * FROM rooms WHERE room_type = @R_type AND free = 'YES' ", con);
             SqlDataAdapter sda = new SqlDataAdapter();
             DataTable dt = new DataTable();
-            cmd.Parameters.Add("@R_Type", SqlDbType.Int).Value = room_no;
+            cmd.Parameters.Add("@R_Type", SqlDbType.VarChar).Value = room_type;
             sda.SelectCommand = cmd;
             sda.Fill(dt);
             return dt;
         }
 
         //function to get roomtypes
-        public int getRoomType(int room_type)
+        public String getRoomType(String room_type)
         {
-            SqlCommand cmd = new SqlCommand("SELECT room_type FROM rooms WHERE room_no=@roomno ", con);
+            SqlCommand cmd = new SqlCommand("SELECT room_type FROM rooms WHERE room_no=@roomno", con);
             SqlDataAdapter sda = new SqlDataAdapter();
             DataTable dt = new DataTable();
-            cmd.Parameters.Add("@roomno", SqlDbType.Int).Value = room_type;
+            cmd.Parameters.Add("@roomno", SqlDbType.VarChar).Value = room_type;
             sda.SelectCommand = cmd;
             sda.Fill(dt);
-            return Convert.ToInt32(dt.Rows[0]["room_type"].ToString());
+            return dt.Rows[0]["room_type"].ToString();
         }
+
+        //function to get room price 
+       /* public int roomPrice(int price)
+        {
+            SqlCommand cmd = new SqlCommand("SELECT price FROM rooms WHERE room_no=@roomno",con);
+            SqlDataAdapter sda = new SqlDataAdapter();
+            DataTable dt = new DataTable();
+            cmd.Parameters.Add("@roomno", SqlDbType.Int).Value = price;
+            sda.SelectCommand = cmd;
+            sda.Fill(dt);
+            return Convert.ToInt32(dt.Rows[0]["price"].ToString());
+        }*/
 
         //function to set table rooms Free column to No
         public bool setRoomFree(int room_no, String YES_or_NO )
@@ -107,12 +119,12 @@ namespace HotelManagementSystem
 
 
         //function to edit rooms
-        public bool editRooms(int room_no, int room_type, int price, String free)
+        public bool editRooms(int room_no, String room_type, int price, String free)
         {
             SqlCommand cmd = new SqlCommand("UPDATE rooms SET room_type=@roomtype, price=@price, free=@free WHERE room_no=@roomno", con);
             cmd.Parameters.Add("@roomno", SqlDbType.Int).Value = room_no;
-            cmd.Parameters.Add("@roomtype", SqlDbType.Int).Value = room_type;
-            cmd.Parameters.Add("@price", SqlDbType.VarChar).Value = price;
+            cmd.Parameters.Add("@roomtype", SqlDbType.VarChar).Value = room_type;
+            cmd.Parameters.Add("@price", SqlDbType.Int).Value = price;
             cmd.Parameters.Add("@free", SqlDbType.VarChar).Value = free;
             con.Open();
             if(cmd.ExecuteNonQuery()==1)

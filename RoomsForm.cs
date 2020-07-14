@@ -26,17 +26,23 @@ namespace HotelManagementSystem
             comboRoomType.DisplayMember = "label";
             comboRoomType.ValueMember = "category_id";
 
-            //display price
+            //display room price 
             comboBoxprice.DataSource = room.roomTypeList();
             comboBoxprice.DisplayMember = "price";
             comboBoxprice.ValueMember = "category_id";
+
+            //display room pirce depending on room type
+            /*String room_type = comboRoomType.SelectedValue.ToString();
+            comboBoxprice.DataSource = room.getRoomsByType(room_type);
+            comboBoxprice.DisplayMember = "price";
+            comboBoxprice.ValueMember = "price";*/
 
             dataGridView1.DataSource = room.getRooms();
         }
 
         private void btnAddNewRoom_Click(object sender, EventArgs e)
         {
-            int room_type = Convert.ToInt32(comboRoomType.SelectedValue.ToString());
+            String room_type = comboRoomType.SelectedValue.ToString();
             int price = Convert.ToInt32(comboBoxprice.SelectedValue.ToString());
             String free = "";
 
@@ -84,8 +90,8 @@ namespace HotelManagementSystem
         private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             txtRoomNo.Text = dataGridView1.CurrentRow.Cells[0].Value.ToString();
-            comboRoomType.SelectedValue = dataGridView1.CurrentRow.Cells[1].Value;
-            comboBoxprice.SelectedValue = dataGridView1.CurrentRow.Cells[2].Value;
+            comboRoomType.SelectedValue = dataGridView1.CurrentRow.Cells[1].Value.ToString();
+            comboBoxprice.SelectedValue = dataGridView1.CurrentRow.Cells[2].Value.ToString(); ;
 
             String free = dataGridView1.CurrentRow.Cells[3].Value.ToString();
 
@@ -102,7 +108,7 @@ namespace HotelManagementSystem
         private void btnEdit_Click(object sender, EventArgs e)
         {
             
-            int room_type = Convert.ToInt32(comboRoomType.SelectedValue.ToString());
+            String room_type = comboRoomType.SelectedValue.ToString();
             int price = Convert.ToInt32(comboBoxprice.SelectedValue.ToString());
             String free = "";
 
@@ -175,6 +181,22 @@ namespace HotelManagementSystem
         private void btnCancel_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void comboRoomType_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            try
+            {
+                String room_type = comboRoomType.SelectedValue.ToString();
+                comboBoxprice.DataSource = room.getRoomsByType(room_type);
+                comboBoxprice.DisplayMember = "price";
+                comboBoxprice.ValueMember = "price";
+            }
+            catch
+            {
+
+            }
+            
         }
     }
 }

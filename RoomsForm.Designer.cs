@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
+            this.comboBoxprice = new System.Windows.Forms.ComboBox();
             this.btnExit = new System.Windows.Forms.Button();
             this.btnCancel = new System.Windows.Forms.Button();
             this.panel3 = new System.Windows.Forms.Panel();
@@ -47,7 +48,6 @@
             this.lblRoomNo = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
             this.lblROOMS = new System.Windows.Forms.Label();
-            this.comboBoxprice = new System.Windows.Forms.ComboBox();
             this.panel1.SuspendLayout();
             this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
@@ -80,6 +80,15 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(913, 544);
             this.panel1.TabIndex = 1;
+            // 
+            // comboBoxprice
+            // 
+            this.comboBoxprice.Font = new System.Drawing.Font("Modern No. 20", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.comboBoxprice.FormattingEnabled = true;
+            this.comboBoxprice.Location = new System.Drawing.Point(142, 204);
+            this.comboBoxprice.Name = "comboBoxprice";
+            this.comboBoxprice.Size = new System.Drawing.Size(186, 28);
+            this.comboBoxprice.TabIndex = 20;
             // 
             // btnExit
             // 
@@ -156,6 +165,7 @@
             this.comboRoomType.Name = "comboRoomType";
             this.comboRoomType.Size = new System.Drawing.Size(186, 28);
             this.comboRoomType.TabIndex = 16;
+            this.comboRoomType.SelectedIndexChanged += new System.EventHandler(this.comboRoomType_SelectedIndexChanged);
             // 
             // btnClearFields
             // 
@@ -302,15 +312,6 @@
             this.lblROOMS.Size = new System.Drawing.Size(214, 54);
             this.lblROOMS.TabIndex = 0;
             this.lblROOMS.Text = "ROOMS ";
-            // 
-            // comboBoxprice
-            // 
-            this.comboBoxprice.Font = new System.Drawing.Font("Modern No. 20", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboBoxprice.FormattingEnabled = true;
-            this.comboBoxprice.Location = new System.Drawing.Point(142, 204);
-            this.comboBoxprice.Name = "comboBoxprice";
-            this.comboBoxprice.Size = new System.Drawing.Size(186, 28);
-            this.comboBoxprice.TabIndex = 20;
             // 
             // RoomsForm
             // 

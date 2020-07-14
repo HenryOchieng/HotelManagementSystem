@@ -10,6 +10,5 @@ C:\Users\Henry\Documents\Visual Studio 2015\Projects\HotelManagementSystem\Hotel
 C:\Users\Henry\Documents\Visual Studio 2015\Projects\HotelManagementSystem\HotelManagementSystem\obj\Debug\HotelManagementSystem.ReservationsForm.resources
 C:\Users\Henry\Documents\Visual Studio 2015\Projects\HotelManagementSystem\HotelManagementSystem\obj\Debug\HotelManagementSystem.RoomsForm.resources
 C:\Users\Henry\Documents\Visual Studio 2015\Projects\HotelManagementSystem\HotelManagementSystem\obj\Debug\HotelManagementSystem.Login.resources
-C:\Users\Henry\Documents\Visual Studio 2015\Projects\HotelManagementSystem\HotelManagementSystem\obj\Debug\HotelManagementSystem.Home.resources
-C:\Users\Henry\Documents\Visual Studio 2015\Projects\HotelManagementSystem\HotelManagementSystem\obj\Debug\HotelManagementSystem.Welcome.resources
 C:\Users\Henry\Documents\Visual Studio 2015\Projects\HotelManagementSystem\HotelManagementSystem\obj\Debug\HotelManagementSystem.RoomAttendantForm.resources
+C:\Users\Henry\Documents\Visual Studio 2015\Projects\HotelManagementSystem\HotelManagementSystem\obj\Debug\HotelManagementSystem.Home.resources

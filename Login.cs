@@ -13,6 +13,7 @@ namespace HotelManagementSystem
 {
     public partial class Login : Form
     {
+
         public Login()
         {
             InitializeComponent();
@@ -24,6 +25,7 @@ namespace HotelManagementSystem
         }
 
         private void btnLogin_Click(object sender, EventArgs e)
+
         {
             SqlConnection con = new SqlConnection("Data source=HENRY\\SQL_2017;Initial Catalog=Hotel;Integrated Security=True");
             SqlDataAdapter sda = new SqlDataAdapter("SELECT * FROM users WHERE username='" + textBoxusername.Text + "' AND password = '" + textBoxpassword.Text + "'", con);
@@ -31,9 +33,14 @@ namespace HotelManagementSystem
             sda.Fill(dt);
             if(dt.Rows.Count > 0)
             {
-                this.Hide();
-                Welcome main = new Welcome();
-                main.Show();
+                //(this.Owner as Welcome).buttonClients.Enabled = true;
+               // this.Owner.Enabled = true;
+
+               //this.buttonClients.Enabled = true;
+                //this.Hide();
+                // Welcome main = new Welcome();
+                // main.Show();
+
             }
             else
             {

@@ -55,11 +55,11 @@
       <DependentUpon>RoomAttendantForm.cs</DependentUpon>
     </Compile>
     <Compile Include="ROOM_ATTENDANTS.cs" />
-    <Compile Include="Welcome.cs">
+    <Compile Include="Home.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Welcome.Designer.cs">
-      <DependentUpon>Welcome.cs</DependentUpon>
+    <Compile Include="Home.Designer.cs">
+      <DependentUpon>Home.cs</DependentUpon>
     </Compile>
     <Compile Include="ClientsForm.cs">
       <SubType>Form</SubType>
@@ -89,17 +89,11 @@
     <Compile Include="Login.Designer.cs">
       <DependentUpon>Login.cs</DependentUpon>
     </Compile>
-    <Compile Include="Home.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Home.Designer.cs">
-      <DependentUpon>Home.cs</DependentUpon>
-    </Compile>
     <EmbeddedResource Include="RoomAttendantForm.resx">
       <DependentUpon>RoomAttendantForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Welcome.resx">
-      <DependentUpon>Welcome.cs</DependentUpon>
+    <EmbeddedResource Include="Home.resx">
+      <DependentUpon>Home.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ClientsForm.resx">
       <DependentUpon>ClientsForm.cs</DependentUpon>
@@ -122,9 +116,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Login.resx">
       <DependentUpon>Login.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Home.resx">
-      <DependentUpon>Home.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

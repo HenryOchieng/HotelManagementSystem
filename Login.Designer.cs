@@ -31,7 +31,6 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Login));
             this.panel1 = new System.Windows.Forms.Panel();
             this.textBoxpassword = new System.Windows.Forms.TextBox();
-            this.btnExit = new System.Windows.Forms.Button();
             this.btnCancel = new System.Windows.Forms.Button();
             this.btnClear = new System.Windows.Forms.Button();
             this.btnLogin = new System.Windows.Forms.Button();
@@ -48,7 +47,6 @@
             // 
             this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.panel1.Controls.Add(this.textBoxpassword);
-            this.panel1.Controls.Add(this.btnExit);
             this.panel1.Controls.Add(this.btnCancel);
             this.panel1.Controls.Add(this.btnClear);
             this.panel1.Controls.Add(this.btnLogin);
@@ -70,21 +68,6 @@
             this.textBoxpassword.TabIndex = 8;
             this.textBoxpassword.UseSystemPasswordChar = true;
             // 
-            // btnExit
-            // 
-            this.btnExit.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
-            this.btnExit.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnExit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnExit.Font = new System.Drawing.Font("Modern No. 20", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnExit.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
-            this.btnExit.Location = new System.Drawing.Point(210, 194);
-            this.btnExit.Name = "btnExit";
-            this.btnExit.Size = new System.Drawing.Size(151, 70);
-            this.btnExit.TabIndex = 7;
-            this.btnExit.Text = "EXIT";
-            this.btnExit.UseVisualStyleBackColor = false;
-            this.btnExit.Click += new System.EventHandler(this.btnExit_Click);
-            // 
             // btnCancel
             // 
             this.btnCancel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
@@ -94,7 +77,7 @@
             this.btnCancel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
             this.btnCancel.Location = new System.Drawing.Point(7, 194);
             this.btnCancel.Name = "btnCancel";
-            this.btnCancel.Size = new System.Drawing.Size(145, 70);
+            this.btnCancel.Size = new System.Drawing.Size(354, 70);
             this.btnCancel.TabIndex = 6;
             this.btnCancel.Text = "CANCEL";
             this.btnCancel.UseVisualStyleBackColor = false;
@@ -215,7 +198,6 @@
         private System.Windows.Forms.Label labelusername;
         private System.Windows.Forms.Button btnCancel;
         private System.Windows.Forms.Button btnClear;
-        private System.Windows.Forms.Button btnExit;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TextBox textBoxpassword;
     }
