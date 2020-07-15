@@ -179,7 +179,7 @@
             this.buttonSignIn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonSignIn.Font = new System.Drawing.Font("Modern No. 20", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonSignIn.ForeColor = System.Drawing.Color.Aqua;
-            this.buttonSignIn.Location = new System.Drawing.Point(-2, 3);
+            this.buttonSignIn.Location = new System.Drawing.Point(3, 3);
             this.buttonSignIn.Name = "buttonSignIn";
             this.buttonSignIn.Size = new System.Drawing.Size(145, 75);
             this.buttonSignIn.TabIndex = 8;
@@ -195,7 +195,7 @@
             this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button4.Font = new System.Drawing.Font("Modern No. 20", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button4.ForeColor = System.Drawing.Color.Aqua;
-            this.button4.Location = new System.Drawing.Point(586, 3);
+            this.button4.Location = new System.Drawing.Point(581, 3);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(160, 75);
             this.button4.TabIndex = 9;
@@ -239,12 +239,12 @@
 
         #endregion
         private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button buttonClients;
+        public System.Windows.Forms.Button buttonClients;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Button buttonRoomAttendants;
-        private System.Windows.Forms.Button buttonReservations;
-        private System.Windows.Forms.Button buttonRooms;
+        public System.Windows.Forms.Button buttonRoomAttendants;
+        public System.Windows.Forms.Button buttonReservations;
+        public System.Windows.Forms.Button buttonRooms;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Button buttonSignIn;

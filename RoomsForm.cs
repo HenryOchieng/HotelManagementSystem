@@ -194,7 +194,7 @@ namespace HotelManagementSystem
             }
             catch
             {
-
+                //nothing
             }
             
         }

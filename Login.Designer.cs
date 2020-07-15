@@ -32,7 +32,6 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.textBoxpassword = new System.Windows.Forms.TextBox();
             this.btnCancel = new System.Windows.Forms.Button();
-            this.btnClear = new System.Windows.Forms.Button();
             this.btnLogin = new System.Windows.Forms.Button();
             this.labelpassword = new System.Windows.Forms.Label();
             this.textBoxusername = new System.Windows.Forms.TextBox();
@@ -48,14 +47,13 @@
             this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.panel1.Controls.Add(this.textBoxpassword);
             this.panel1.Controls.Add(this.btnCancel);
-            this.panel1.Controls.Add(this.btnClear);
             this.panel1.Controls.Add(this.btnLogin);
             this.panel1.Controls.Add(this.labelpassword);
             this.panel1.Controls.Add(this.textBoxusername);
             this.panel1.Controls.Add(this.labelusername);
-            this.panel1.Location = new System.Drawing.Point(13, 236);
+            this.panel1.Location = new System.Drawing.Point(13, 253);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(376, 278);
+            this.panel1.Size = new System.Drawing.Size(376, 196);
             this.panel1.TabIndex = 2;
             // 
             // textBoxpassword
@@ -75,28 +73,13 @@
             this.btnCancel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCancel.Font = new System.Drawing.Font("Modern No. 20", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCancel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
-            this.btnCancel.Location = new System.Drawing.Point(7, 194);
+            this.btnCancel.Location = new System.Drawing.Point(210, 109);
             this.btnCancel.Name = "btnCancel";
-            this.btnCancel.Size = new System.Drawing.Size(354, 70);
+            this.btnCancel.Size = new System.Drawing.Size(151, 62);
             this.btnCancel.TabIndex = 6;
             this.btnCancel.Text = "CANCEL";
             this.btnCancel.UseVisualStyleBackColor = false;
             this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
-            // 
-            // btnClear
-            // 
-            this.btnClear.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
-            this.btnClear.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnClear.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnClear.Font = new System.Drawing.Font("Modern No. 20", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnClear.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
-            this.btnClear.Location = new System.Drawing.Point(210, 116);
-            this.btnClear.Name = "btnClear";
-            this.btnClear.Size = new System.Drawing.Size(151, 72);
-            this.btnClear.TabIndex = 5;
-            this.btnClear.Text = "CLEAR";
-            this.btnClear.UseVisualStyleBackColor = false;
-            this.btnClear.Click += new System.EventHandler(this.btnClear_Click);
             // 
             // btnLogin
             // 
@@ -105,9 +88,9 @@
             this.btnLogin.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnLogin.Font = new System.Drawing.Font("Modern No. 20", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnLogin.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
-            this.btnLogin.Location = new System.Drawing.Point(7, 116);
+            this.btnLogin.Location = new System.Drawing.Point(7, 109);
             this.btnLogin.Name = "btnLogin";
-            this.btnLogin.Size = new System.Drawing.Size(145, 72);
+            this.btnLogin.Size = new System.Drawing.Size(145, 62);
             this.btnLogin.TabIndex = 4;
             this.btnLogin.Text = "LOGIN";
             this.btnLogin.UseVisualStyleBackColor = false;
@@ -131,7 +114,6 @@
             this.textBoxusername.Name = "textBoxusername";
             this.textBoxusername.Size = new System.Drawing.Size(203, 28);
             this.textBoxusername.TabIndex = 1;
-            this.textBoxusername.TextChanged += new System.EventHandler(this.textBox2_TextChanged);
             // 
             // labelusername
             // 
@@ -158,9 +140,9 @@
             // pictureBox1
             // 
             this.pictureBox1.Image = global::HotelManagementSystem.Properties.Resources.images;
-            this.pictureBox1.Location = new System.Drawing.Point(107, 42);
+            this.pictureBox1.Location = new System.Drawing.Point(112, 42);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(210, 188);
+            this.pictureBox1.Size = new System.Drawing.Size(198, 188);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
@@ -170,7 +152,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
-            this.ClientSize = new System.Drawing.Size(406, 526);
+            this.ClientSize = new System.Drawing.Size(406, 461);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.pictureBox1);
@@ -197,7 +179,6 @@
         private System.Windows.Forms.TextBox textBoxusername;
         private System.Windows.Forms.Label labelusername;
         private System.Windows.Forms.Button btnCancel;
-        private System.Windows.Forms.Button btnClear;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TextBox textBoxpassword;
     }
